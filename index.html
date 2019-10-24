@@ -12,52 +12,77 @@
 
 <body>
     <div class="container">
-        <div class="row">
+        <!--Header-->
+        <div class="row mb-5">
             <div class="col" id="lftTopCol">
-                <div>
-                    <a href="#">
-                        See Scoreboard
-                    </a>
-                </div>
+                <a href="#">
+                    See Scoreboard
+                </a>
             </div>
             <div class="col" id="rtTopCol">
-                <div>
-                    <div id="timeRemain">Timer</div>
-                </div>
+                <span class="float-right">Time Remaining:<span id="timeRemain"></span></span>
             </div>
         </div>
-        <div class="row">
+        <!--Start -->
+        <div class="row m-4" id="startScr">
             <div class="col">
                 <div class="container">
-                    <div class="jumbotron">
-                        <div class="page-header">Question 1</div>
+                    <div class="jumbotron text-center">
+                        <h1 class="display-4">Coding Quiz Challenge</h1>
+                        <hr class="my-4">
+                        <p class="lead m-4"> Answer the following questions as quickly and accurately as you can! Score
+                            is calculated by
+                            time remaining; each wrong answer results in a 15 second time penalty. Think fast!</p>
+                        <div class="text-center"><button class="btn btn-lg btn-block btn-success"
+                                onclick="startGame()">Start!</button></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!--Questions -->
+        <div class="row d-none" id="multiChoiceQ">
             <div class="col">
+                <div class="container">
+                    <div class="jumbotron">
+                        <p class="lead" id="questionBox"> Question question </p>
+                        <hr class="my-4">
+                        <ul class="list-group">
+                            <li class="list-group-item"><button class="btn btn-lg btn-block btn-info">Answer1</button>
+                            </li>
+                            <li class="list-group-item"><button class="btn btn-lg btn-block btn-info">Answer 2</button>
+                            </li>
+                            <li class="list-group-item"><button class="btn btn-lg btn-block btn-info">Answer1</button>
+                            </li>
+                            <li class="list-group-item"><button class="btn btn-lg btn-block btn-info">Answer 2</button>
+                            </li>
 
-            </div>
-            <div class="col">
-
-            </div>
-            <div class="col">
-
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+        <!--Finish -->
+        <div class="row d-none" id="initials">
+            <div class="col">
+                <div class="container">
+                    <div class="jumbotron">
 
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+        <script src="questions.js"></script>
+        <script src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
