@@ -48,7 +48,7 @@ function buildQue(questions = []) {
 
 function showNextQue() {
     var currentQuestion = document.querySelectorAll(".question:not(.d-none)")[0];
-    //Get number from current Item id by splitting string and parsing number and adding 1
+    //Get number from current quiz item id (split string, parse number, add 1)
     var currentIndex = Number.parseInt(currentQuestion.id.split("-")[1]);
     currentQuestion.classList.add("d-none");
     document.getElementById(`question-${++currentIndex}`).classList.remove('d-none');
@@ -56,8 +56,7 @@ function showNextQue() {
 
 
 function checkAnswer(event) {
-    //querySelectorAll returns an array need toget first element.
-    //The a query string says give me all item with a question class that are not hidden
+    //querySelectorAll returns an array. need to get first element.
     var currentQuestion = document.querySelectorAll(".question:not(.d-none)")[0];
     var currentAnswer = currentQuestion.dataset.answer;
     //check clicked button
@@ -65,7 +64,7 @@ function checkAnswer(event) {
     var currentChoice = event.currentTarget.dataset.choice;
     //look at property data-choice and compare to data-answer on parent
     if(currentChoice === currentAnswer){
-        //Show `Right` text
+        //Show "Crrect!" text
         //Add point to score
     }else{
         //Show `Wrong` text
