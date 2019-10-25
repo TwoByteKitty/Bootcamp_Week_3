@@ -43,17 +43,30 @@
         <div class="row d-none" id="multiChoiceQ">
             <div class="col">
                 <div class="container">
-                    <div class="jumbotron" id="question-tron">
-                        
+                    <div class="jumbotron">
+                        <div id="question-tron">
+                        </div>
+                        <hr>
+                        <div id="feedback">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--Finish -->
-        <div class="row d-none" id="initials">
+        <div class="row d-none" id="finishLine">
             <div class="col">
                 <div class="container">
                     <div class="jumbotron">
+                        <h3>Well Done!</h3>
+                        <p>Your final score is <span id="playerScrDispl"></span></p>
+                        <div class="input-group" id="playerNameInput">
+                            <input id="playerName" type="text" class="form-control" placeholder="Enter your name here!">
+                            <div class="input-group-append">
+                                <button onclick="submitScore(event)" class="btn btn-success" type="button"
+                                    id="logScoreBtn">Log Score</button>
+                            </div>
+                        </div>
 
                     </div>
                 </div>
